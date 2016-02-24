@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.ifpb.pdm.lojadetemas.DetalhesCategoriaActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rock"
+        android:id="@+id/categoriaText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ImagemCategoria"
+        android:background="@drawable/rocktema"
+        android:layout_below="@+id/categoriaText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/temaSuperArea">
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/temaArea">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="5dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/temaView4">
+                            <ImageButton
+                                android:layout_width="130dp"
+                                android:layout_height="160dp"
+                                android:id="@+id/imageTema4"
+                                android:cropToPadding="true"
+                                android:contextClickable="false"
+                                android:background="@drawable/desenho"
+                                android:onClick="callTemaLeddt"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Led Zeppelin"
+                                android:id="@+id/nome4" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/temaView2">
+                            <ImageButton
+                                android:layout_width="130dp"
+                                android:layout_height="160dp"
+                                android:id="@+id/imageTema2"
+                                android:cropToPadding="true"
+                                android:contextClickable="false"
+                                android:background="@drawable/rock"
+                                android:onClick="callTemaJethrodt"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Jethro Tull"
+                                android:id="@+id/nome2" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Temas de Bandas de Rock"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/ImagemCategoria"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
